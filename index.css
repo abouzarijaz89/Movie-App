@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap");
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #1A1A1D;
+    font-family: "Montserrat", "Poppins", "sans-serif";
+    margin: 0;
+}
+
+header{
+    background-color: #C3073F;
+    padding: 1rem;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.search {
+    background-color: transparent;
+    border:2px solid #1A1A1D;
+    border-radius: 50px;
+    font-family: inherit;
+    padding: 0.5rem 1.2rem;
+    /* color: #1A1A1D; */
+    color: #eee;
+    font-size: 1rem;
+    
+}
+
+.search::placeholder {
+font-size: 18px;
+color:#eee;
+}
+.search:focus {
+    outline: none;
+    /* background-color: #C3073F; */
+    background-color: #1A1A1D;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 40px; */
+}
+.movie{
+  width: 300px; 
+  background-color: #C3073F;
+  border-radius: 5px;
+  box-shadow:0 4px 5px rgba(0, 0, 0, 0.2) ;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.movie img{
+    max-width: 100%;
+}
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    color: #eee;
+    padding: 0.5rem 1rem 1rem;
+    /* letter-spacing: normal; */
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+.movie-info h3{
+    margin: 0;
+}
+.movie-info span{
+    background-color: #1A1A1D;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.movie-info span.green{
+color: #4caf50;
+}
+.movie-info span.orange{
+color: orange;
+}
+.movie-info span.red{
+color: #202c61;
+}
+
+.overview {
+    background-color: #C3073F;
+    border-radius: 20px;
+    color:#eee;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+    /* color:#1A1A1D; */
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
